@@ -1,12 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Django App</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+  </head>
+  <body>
     <h1>Welcome to My Django App</h1>
-    <p>This is the index page.</p>
-</body>
+    <p>{{subtitle}}</p>
+    <ul>
+      
+      {% if skills|length > 0 %}
+        
+    
+        
+      {% for n in skills %}
+      {% if n > 20 %}
+      <li>{{n}}</li>
+      {% endif %}   
+      
+      {% endfor %}
+      {% else %}
+      <div> data not found</div>
+      {% endif %}
+</ul>
+      <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Phone</th>
+        </tr>
+        {% for student in student_details %}
+        <tr>
+              <td>{{student.name}}</td>
+            <td>{{student.id}}</td>
+
+        </tr>
+        {% endfor %}
+
+
+
+    
+  </body>
 </html>

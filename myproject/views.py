@@ -1,0 +1,13 @@
+from django.http import HttpResponse
+from django.shortcuts import render
+
+
+def aboutUs(request):
+    return HttpResponse("Welcome to about page .")
+def course(request):
+    return HttpResponse("Welcome to about page .")
+def courseDetail(request,id):
+    return HttpResponse(id)
+def homePage(request):
+    return render(request, "index.html")
+    

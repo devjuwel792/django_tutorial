@@ -139,9 +139,15 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav mx-0 mx-lg-auto">
-              <a href="/" class="nav-item nav-link active">Home</a>
-              <a href="/about-us" class="nav-item nav-link active">About</a>
-              <a href="/service" class="nav-item nav-link">Services</a>
+              <a href="{% url 'home' %}" class="nav-item nav-link active"
+                >Home</a
+              >
+              <a href="{% url 'about' %}" class="nav-item nav-link active"
+                >About</a
+              >
+              <a href="{% url 'service' %}" class="nav-item nav-link"
+                >Services</a
+              >
               <div class="nav-item dropdown">
                 <a href="#" class="nav-link" data-bs-toggle="dropdown">
                   <span class="dropdown-toggle">Pages</span>
@@ -151,7 +157,9 @@
                   <a href="team.html" class="dropdown-item">Our team</a>
                 </div>
               </div>
-              <a href="contact.html" class="nav-item nav-link">Contact</a>
+              <a href="{% url 'contact' %}" class="nav-item nav-link"
+                >Contact</a
+              >
               <div class="nav-btn px-3">
                 <a
                   href="https://htmlcodex.com/downloading/?item=3422"

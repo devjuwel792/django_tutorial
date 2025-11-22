@@ -10,6 +10,10 @@ def service(request):
     return render(request, "service.html")
 
 
+def contact(request):
+    return render(request, "contact.html")
+
+
 def course(request):
     return HttpResponse("Welcome to about page .")
 

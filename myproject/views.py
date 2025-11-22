@@ -3,8 +3,11 @@ from django.shortcuts import render
 
 
 def aboutUs(request):
+    return render(request, "about.html")
 
-    return HttpResponse("Welcome to about page .")
+
+def service(request):
+    return render(request, "service.html")
 
 
 def course(request):
